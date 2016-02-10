@@ -1,0 +1,8 @@
+#!/bin/bash
+# build mergerfs from source at container runtime
+
+git clone https://github.com/trapexit/mergerfs.git && \
+cd mergerfs && \
+make -j4 clean && \
+make -j4 deb && \
+cp ../*.deb /artifact
